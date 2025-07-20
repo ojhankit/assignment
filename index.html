@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Colorful Motivational Zoom</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .perspective-1200 {
+      perspective: 1200px;
+    }
+    .parallax-bg {
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      opacity: 0.25;
+    }
+  </style>
+</head>
+<body class="overflow-hidden font-sans">
+  <div id="loader" class="fixed inset-0 z-50 flex items-center justify-center bg-black text-white text-3xl font-bold tracking-widest">
+    <div class="flex flex-col items-center gap-4">
+        <div class="loader-spinner w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+        <div class="text-lg animate-pulse">Preparing Inspiration...</div>
+    </div>
+  </div>  
+  <main class="relative w-full min-h-[100dvh] perspective-1200">
+    <section class="panel absolute inset-0">
+      <div class="zoom-layer w-full h-full flex items-center justify-center bg-gradient-to-br from-red-500 to-yellow-500">
+        <div class="zoom-content text-[1vw] font-extrabold text-white drop-shadow-[0_0_25px_rgba(255,255,255,0.8)]">Stay Hungry.</div>
+      </div>
+    </section>
+
+    <section class="panel absolute inset-0">
+      <div class="zoom-layer w-full h-full flex items-center justify-center bg-gradient-to-tr from-orange-400 to-pink-500">
+        <div class="zoom-content text-[1vw] font-extrabold text-black drop-shadow-[0_0_25px_rgba(0,0,0,0.5)]">Stay Foolish.</div>
+      </div>
+    </section>
+
+    <section class="panel absolute inset-0">
+      <div class="zoom-layer w-full h-full flex items-center justify-center bg-gradient-to-b from-yellow-300 to-pink-300">
+        <div class="zoom-content text-[1vw] font-extrabold text-pink-700 drop-shadow-[0_0_25px_rgba(255,0,120,0.5)]">Keep Going.</div>
+      </div>
+    </section>
+
+    <section class="panel absolute inset-0">
+      <div class="zoom-layer w-full h-full flex items-center justify-center bg-gradient-to-tl from-green-400 to-blue-500">
+        <div class="zoom-content text-[1vw] font-extrabold text-blue-900 drop-shadow-[0_0_30px_rgba(0,0,255,0.6)]">Trust Yourself.</div>
+      </div>
+    </section>
+
+    <section class="panel absolute inset-0">
+      <div class="zoom-layer w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-500 to-teal-400">
+        <div class="zoom-content text-[1vw] font-extrabold text-yellow-100 drop-shadow-[0_0_20px_rgba(255,255,0,0.7)]">Embrace Failure.</div>
+      </div>
+    </section>
+
+    <section class="panel absolute inset-0">
+      <div class="zoom-layer w-full h-full flex items-center justify-center bg-gradient-to-tr from-indigo-500 to-purple-500">
+        <div class="zoom-content text-[1vw] font-extrabold text-white drop-shadow-[0_0_30px_rgba(255,255,255,0.6)]">Dream Bigger.</div>
+      </div>
+    </section>
+
+    <section class="panel absolute inset-0">
+      <div class="zoom-layer w-full h-full flex items-center justify-center bg-gradient-to-bl from-pink-500 to-yellow-300">
+        <div class="zoom-content text-[1vw] font-extrabold text-black drop-shadow-[0_0_25px_rgba(0,0,0,0.6)]">Be Relentless.</div>
+      </div>
+    </section>
+
+    <section class="panel absolute inset-0">
+      <div class="zoom-layer w-full h-full flex items-center justify-center bg-gradient-to-br from-teal-400 to-cyan-400">
+        <div class="zoom-content text-[1vw] font-extrabold text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.5)]">Never Settle.</div>
+      </div>
+    </section>
+
+    <section class="panel absolute inset-0">
+      <div class="zoom-layer w-full h-full flex items-center justify-center bg-gradient-to-r from-fuchsia-500 to-violet-600">
+        <div class="zoom-content text-[1vw] font-extrabold text-black drop-shadow-[0_0_25px_rgba(0,0,0,0.6)]">Push Limits.</div>
+      </div>
+    </section>
+
+    <section class="panel absolute inset-0">
+      <div class="zoom-layer w-full h-full flex items-center justify-center bg-gradient-to-br from-lime-400 to-green-300">
+        <div class="zoom-content text-[1vw] font-extrabold text-red-700 drop-shadow-[0_0_25px_rgba(255,0,0,0.5)]">Start Today.</div>
+      </div>
+    </section>
+
+    <section class="panel absolute inset-0">
+      <div class="zoom-layer w-full h-full flex items-center justify-center bg-gradient-to-tr from-rose-400 to-red-500">
+        <div class="zoom-content text-[1vw] font-extrabold text-indigo-900 drop-shadow-[0_0_25px_rgba(0,0,0,0.5)]">Make Impact.</div>
+      </div>
+    </section>
+
+    <section class="panel absolute inset-0">
+      <div class="zoom-layer w-full h-full flex items-center justify-center bg-gradient-to-bl from-cyan-400 to-blue-300">
+        <div class="zoom-content text-[1vw] font-extrabold text-yellow-100 drop-shadow-[0_0_25px_rgba(255,255,0,0.5)]">Keep Rising.</div>
+      </div>
+    </section>
+
+    <div class="absolute inset-0 pointer-events-none rounded-full z-50 bg-black/20 shadow-[inset_0_0_100px_rgba(0,0,0,0.5)]"></div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="app.js">
+  </script>
+</body>
+</html>
