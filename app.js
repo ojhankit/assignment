@@ -84,7 +84,7 @@ async function showPanel(i) {
 
   // Prepare next panel
   gsap.set(next, { autoAlpha: 1, zIndex: 0 });
-  gsap.set(nextCard, { scale: 0.4, opacity: 0.6, y: -20 });
+  gsap.set(nextCard, { scale: 0.4, opacity: 0.6, y: -25 });
 
   // Bring current panel to front
   gsap.set(current, { autoAlpha: 1, zIndex: 10 });
@@ -93,9 +93,9 @@ async function showPanel(i) {
 
   // Animate current card out
   tl.to(currentCard, {
-    scale: 12,
+    scale: 15,
     opacity: 0,
-    duration: 8,
+    duration: 12,
     ease: "sine.inOut",
     force3D: true
   });
